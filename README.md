@@ -5,8 +5,10 @@ Dead Rails servers keep taking up your ports? Get rid of the lingering servers i
 
 ## install
 
-`brew tap freeslugs/homebrew-tap`
-`brew install flush`
+```
+brew tap freeslugs/homebrew-tap
+brew install flush
+```
 
 ## how to use
 
