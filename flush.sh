@@ -15,3 +15,5 @@ function flush {
 	  echo 'No server running in this directory.'
 	fi
 }
+
+flush
