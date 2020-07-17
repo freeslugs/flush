@@ -14,12 +14,12 @@ function flush {
     if ps -p $DEAD_PORT | grep -q $DEAD_PORT 
     then 
       kill -9 $(<./tmp/pids/server.pid)
-      echo "${CYAN}Removed server on port ${DEAD_PORT}${NOCOLOR}." 
+      printf "${CYAN}Removed server on port ${DEAD_PORT}${NOCOLOR}.\n" 
     else
-      echo "${ORANGE}Server is aleady ${RED}dead${NOCOLOR}."
+      printf "${ORANGE}Server is aleady ${RED}dead${NOCOLOR}.\n"
     fi
 	else
-	  echo "${PURPLE}No server running in this directory${NOCOLOR}."
+	  printf "${PURPLE}No server running in this directory${NOCOLOR}.\n"
 	fi
 }
 
