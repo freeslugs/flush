@@ -14,7 +14,7 @@ function flush {
     if ps -p $DEAD_PID | grep -q $DEAD_PID 
     then 
       kill -9 $(<./tmp/pids/server.pid)
-      printf "${CYAN}Removed server on PID ${DEAD_PID}${NOCOLOR}.\n" 
+      printf "${CYAN}Removed server with PID ${DEAD_PID}${NOCOLOR}.\n" 
     else
       printf "${ORANGE}Server is aleady ${RED}dead${NOCOLOR}.\n"
     fi
