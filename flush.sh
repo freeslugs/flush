@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # kill lingering rails server
 function flush {
 	if [[ -f ./tmp/pids/server.pid ]]
