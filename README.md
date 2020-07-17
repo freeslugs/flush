@@ -1,0 +1,2 @@
+# flush
+🧟‍♂️ Kill zombie servers
