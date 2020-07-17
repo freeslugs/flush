@@ -17,7 +17,7 @@ From within a Rails dir
 $ rails s 
 A server is already running ...
 $ flush
-Removed server on port 3000.
+Removed server with PID 14352.
 $ rails s 
 ...
 * Listening on tcp://localhost:3000
