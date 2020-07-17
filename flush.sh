@@ -10,11 +10,11 @@ NOCOLOR='\033[0m'
 function flush {
 	if [[ -f ./tmp/pids/server.pid ]]
 	then
-	  DEAD_PORT=$(<./tmp/pids/server.pid)
-    if ps -p $DEAD_PORT | grep -q $DEAD_PORT 
+	  DEAD_PID=$(<./tmp/pids/server.pid)
+    if ps -p $DEAD_PID | grep -q $DEAD_PID 
     then 
       kill -9 $(<./tmp/pids/server.pid)
-      printf "${CYAN}Removed server on port ${DEAD_PORT}${NOCOLOR}.\n" 
+      printf "${CYAN}Removed server on PID ${DEAD_PID}${NOCOLOR}.\n" 
     else
       printf "${ORANGE}Server is aleady ${RED}dead${NOCOLOR}.\n"
     fi
