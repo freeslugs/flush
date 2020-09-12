@@ -43,3 +43,11 @@ Type "help" for help.
 
 gilad=# 
 ```
+
+
+### Kill zombie redis-commander  
+
+```bash
+$ flush rc
+Attempting to kill localhost:8081.
+```
