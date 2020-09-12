@@ -38,10 +38,38 @@ function flush_pg {
   fi
 } 
 
-if [[ $1 == "pg" ]]
-then 
-  flush_pg
-else 
-  flush_rails
-fi
+# kill zombie redis-commander
+function flush_redis_commander {
+  printf "${PURPLE}Attempting to kill localhost:8081${NOCOLOR}.\n" 
+  lsof -i :8081 | awk 'NR > 1 {print $2}' | xargs kill -9 
+} 
+
+case $1 in
+  "postgres")
+    flush_pg
+    ;;
+
+  "pg")
+    flush_pg
+    ;;
+
+  "redis-commander")
+    flush_redis_commander
+    ;;
+
+  "rc")
+    flush_redis_commander
+    ;;
+
+  *)
+    flush_rails
+    ;;
+esac
+
+# if [[ $1 == "pg" ]]
+# then 
+#   flush_pg
+# else 
+#   flush_rails
+# fi
 
